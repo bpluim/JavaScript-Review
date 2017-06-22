@@ -38,6 +38,12 @@ var songs =
 //Write a function that returns the songs array.  This function is acting like a getter.
 
   //code here
+function getter(songs, cb) {
+  for (var i = 0; i < songs.length; i++) {
+    var song = songs[i];
+  }
+  cb(song);
+}
 
 
 //Now write a function that takes in two paramaters.  This function is acting like a setter.
@@ -46,3 +52,7 @@ var songs =
 //Once you do that, call your callback (getter) function which should get the songs and return them.
   
   //code here
+
+getter(songs, function(song) {
+  return songs + song;
+});
